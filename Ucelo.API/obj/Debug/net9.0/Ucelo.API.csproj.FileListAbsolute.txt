@@ -1,0 +1,14 @@
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/Ucelo.API
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/Ucelo.API.deps.json
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/Ucelo.API.runtimeconfig.json
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/Ucelo.API.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/Ucelo.API.pdb
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/obj/Debug/net9.0/Ucelo.API.GeneratedMSBuildEditorConfig.editorconfig
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/obj/Debug/net9.0/Ucelo.API.AssemblyInfoInputs.cache
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/obj/Debug/net9.0/Ucelo.API.AssemblyInfo.cs
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/obj/Debug/net9.0/Ucelo.API.csproj.CoreCompileInputs.cache
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/obj/Debug/net9.0/Ucelo.API.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/obj/Debug/net9.0/refint/Ucelo.API.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/obj/Debug/net9.0/Ucelo.API.pdb
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/obj/Debug/net9.0/Ucelo.API.genruntimeconfig.cache
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/obj/Debug/net9.0/ref/Ucelo.API.dll
