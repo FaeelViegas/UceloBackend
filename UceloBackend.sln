@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucelo.API", "Ucelo.API\Ucelo.API.csproj", "{CCAE9594-E96F-4FA7-AFEF-F5B636C8C1E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucelo.Infrastructure", "Ucelo.Infrastructure\Ucelo.Infrastructure.csproj", "{BF2234F3-8337-4B04-A01C-83FECDA6B963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucelo.Application", "Ucelo.Application\Ucelo.Application.csproj", "{0A9D143F-8F8D-405B-A7C8-26F80560E377}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucelo.Domain", "Ucelo.Domain\Ucelo.Domain.csproj", "{B73B2990-81EE-4A7B-AC6A-EB348A05BEDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{CCAE9594-E96F-4FA7-AFEF-F5B636C8C1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCAE9594-E96F-4FA7-AFEF-F5B636C8C1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCAE9594-E96F-4FA7-AFEF-F5B636C8C1E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF2234F3-8337-4B04-A01C-83FECDA6B963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2234F3-8337-4B04-A01C-83FECDA6B963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2234F3-8337-4B04-A01C-83FECDA6B963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2234F3-8337-4B04-A01C-83FECDA6B963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A9D143F-8F8D-405B-A7C8-26F80560E377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A9D143F-8F8D-405B-A7C8-26F80560E377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A9D143F-8F8D-405B-A7C8-26F80560E377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A9D143F-8F8D-405B-A7C8-26F80560E377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B73B2990-81EE-4A7B-AC6A-EB348A05BEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B73B2990-81EE-4A7B-AC6A-EB348A05BEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B73B2990-81EE-4A7B-AC6A-EB348A05BEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B73B2990-81EE-4A7B-AC6A-EB348A05BEDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

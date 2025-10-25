@@ -12,6 +12,27 @@
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
+      <None Remove="appsettings.json" />
+      <Content Include="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Ucelo.Application\Ucelo.Application.csproj" />
+        <ProjectReference Include="..\Ucelo.Domain\Ucelo.Domain.csproj" />
+        <ProjectReference Include="..\Ucelo.Infrastructure\Ucelo.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <PrivateAssets>all</PrivateAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
+      <PackageReference Include="Microsoft.OpenApi" Version="1.6.*" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     </ItemGroup>
 
 </Project>

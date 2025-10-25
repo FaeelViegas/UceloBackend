@@ -1,0 +1,12 @@
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.Domain/bin/Debug/net9.0/Ucelo.Domain.deps.json
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.Domain/bin/Debug/net9.0/Ucelo.Domain.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.Domain/bin/Debug/net9.0/Ucelo.Domain.pdb
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.Domain/obj/Debug/net9.0/Ucelo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.Domain/obj/Debug/net9.0/Ucelo.Domain.AssemblyInfoInputs.cache
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.Domain/obj/Debug/net9.0/Ucelo.Domain.AssemblyInfo.cs
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.Domain/obj/Debug/net9.0/Ucelo.Domain.csproj.CoreCompileInputs.cache
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.Domain/obj/Debug/net9.0/Ucelo.Domain.sourcelink.json
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.Domain/obj/Debug/net9.0/Ucelo.Domain.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.Domain/obj/Debug/net9.0/refint/Ucelo.Domain.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.Domain/obj/Debug/net9.0/Ucelo.Domain.pdb
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.Domain/obj/Debug/net9.0/ref/Ucelo.Domain.dll
