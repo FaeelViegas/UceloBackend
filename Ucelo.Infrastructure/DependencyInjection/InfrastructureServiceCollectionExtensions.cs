@@ -1,7 +1,10 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using Npgsql;
+using System.Security.Cryptography;
 using Ucelo.Domain.Enums;
 using Ucelo.Domain.Interfaces;
 using Ucelo.Infrastructure.Data;
@@ -20,10 +23,11 @@ public static class InfrastructureServiceCollectionExtensions
         IConfiguration configuration)
     {
         ConfigureNpgsqlEnumMapping();
-        
+
         AddDatabase(services, configuration);
         AddRepositories(services);
-        AddSecurity(services);
+        AddSecurity(services, configuration);
+        AddAuthentication(services, configuration);
 
         return services;
     }
@@ -49,7 +53,7 @@ public static class InfrastructureServiceCollectionExtensions
 
         services.AddDbContext<UceloDbContext>(options =>
         {
-            options.UseNpgsql(connectionString);    
+            options.UseNpgsql(connectionString);
             options.EnableSensitiveDataLogging(false);
             options.EnableDetailedErrors(false);
         });
@@ -62,11 +66,52 @@ public static class InfrastructureServiceCollectionExtensions
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IIndividualRepository, IndividualRepository>();
         services.AddScoped<ICompanyRepository, CompanyRepository>();
+        services.AddScoped<ILoginAttemptRepository, LoginAttemptRepository>();
     }
 
-    private static void AddSecurity(IServiceCollection services)
+    private static void AddSecurity(IServiceCollection services, IConfiguration configuration)
     {
         services.AddSingleton<IPasswordHasher, PasswordHasher>();
+        services.AddSingleton<IJwtService, JwtService>();
+        services.AddScoped<IRateLimitService, RateLimitService>();
+
+        services.Configure<JwtSettings>(configuration.GetSection("Jwt"));
+        services.Configure<RateLimitSettings>(configuration.GetSection("RateLimiting"));
+    }
+
+    private static void AddAuthentication(IServiceCollection services, IConfiguration configuration)
+    {
+        var jwtSettings = configuration.GetSection("Jwt").Get<JwtSettings>();
+
+        if (jwtSettings == null)
+            throw new InvalidOperationException("Configuração JWT não encontrada");
+
+        var publicKeyBytes = Convert.FromBase64String(jwtSettings.PublicKeyBase64);
+        var rsa = RSA.Create();
+
+        rsa.ImportSubjectPublicKeyInfo(publicKeyBytes, out _);
+
+        services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwtSettings.Issuer,
+                    ValidAudience = jwtSettings.Audience,
+                    IssuerSigningKey = new RsaSecurityKey(rsa),
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
+
+        services.AddAuthorization();
     }
 
     private class NpgsqlNameTranslator : INpgsqlNameTranslator

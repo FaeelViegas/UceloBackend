@@ -98,3 +98,11 @@
 /home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/obj/Debug/net9.0/Ucelo.API.sourcelink.json
 /home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/obj/Debug/net9.0/Ucelo.API.csproj.Up2Date
 /home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/appsettings.json
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/home/rafaeel/RiderProjects/UceloBackend/Ucelo.API/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll

@@ -11,6 +11,7 @@ public static class ApplicationServiceCollectionExtensions
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IIndividualService, IndividualService>();
         services.AddScoped<ICompanyService, CompanyService>();
+        services.AddScoped<IAuthenticationService, AuthenticationService>();
 
         return services;
     }

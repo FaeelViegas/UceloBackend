@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ucelo.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79f04458708603d5960f77017a8b8e6fae141ce5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23cd1c7abdab230b4e67b6636d6d5f5a105b46eb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ucelo.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ucelo.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
