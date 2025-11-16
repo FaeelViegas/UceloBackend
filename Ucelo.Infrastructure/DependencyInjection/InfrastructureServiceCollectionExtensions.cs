@@ -38,8 +38,15 @@ public static class InfrastructureServiceCollectionExtensions
         {
             if (_enumsMapped) return;
 
+            // Mapeamento existente
             NpgsqlConnection.GlobalTypeMapper.MapEnum<UserType>(
                 "type_user",
+                new NpgsqlNameTranslator()
+            );
+
+            // Adicionar este novo mapeamento
+            NpgsqlConnection.GlobalTypeMapper.MapEnum<CalculationType>(
+                "calculation_type",
                 new NpgsqlNameTranslator()
             );
 
@@ -67,6 +74,8 @@ public static class InfrastructureServiceCollectionExtensions
         services.AddScoped<IIndividualRepository, IndividualRepository>();
         services.AddScoped<ICompanyRepository, CompanyRepository>();
         services.AddScoped<ILoginAttemptRepository, LoginAttemptRepository>();
+        services.AddScoped<IBucketRepository, BucketRepository>();
+        services.AddScoped<IMaterialRepository, MaterialRepository>();
     }
 
     private static void AddSecurity(IServiceCollection services, IConfiguration configuration)
@@ -77,6 +86,7 @@ public static class InfrastructureServiceCollectionExtensions
 
         services.Configure<JwtSettings>(configuration.GetSection("Jwt"));
         services.Configure<RateLimitSettings>(configuration.GetSection("RateLimiting"));
+        services.AddScoped<ICalculationRepository, CalculationRepository>();
     }
 
     private static void AddAuthentication(IServiceCollection services, IConfiguration configuration)
@@ -121,6 +131,10 @@ public static class InfrastructureServiceCollectionExtensions
             nameof(UserType.Common) => "Comum",
             nameof(UserType.Seller) => "Vendedor",
             nameof(UserType.Master) => "Master",
+            // Adicionar as traduções do CalculationType
+            nameof(CalculationType.Power) => "potencia",
+            nameof(CalculationType.Tension) => "tensao",
+            nameof(CalculationType.Comparison) => "comparacao",
             _ => clrName
         };
 

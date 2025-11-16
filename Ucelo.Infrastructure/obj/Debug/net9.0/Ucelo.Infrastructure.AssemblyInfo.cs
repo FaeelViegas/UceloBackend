@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ucelo.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23cd1c7abdab230b4e67b6636d6d5f5a105b46eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00a61aa7ee79511d25995f48dcbc5f40f98316a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ucelo.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ucelo.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,17 +2,20 @@ using Microsoft.Extensions.DependencyInjection;
 using Ucelo.Application.Services.Implementations;
 using Ucelo.Application.Services.Interfaces;
 
-namespace Ucelo.Application.DependencyInjection;
-
-public static class ApplicationServiceCollectionExtensions
+namespace Ucelo.Application.DependencyInjection
 {
-    public static IServiceCollection AddApplication(this IServiceCollection services)
+    public static class ApplicationServiceCollectionExtensions
     {
-        services.AddScoped<IUserService, UserService>();
-        services.AddScoped<IIndividualService, IndividualService>();
-        services.AddScoped<ICompanyService, CompanyService>();
-        services.AddScoped<IAuthenticationService, AuthenticationService>();
+        public static IServiceCollection AddApplication(this IServiceCollection services)
+        {
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IIndividualService, IndividualService>();
+            services.AddScoped<ICompanyService, CompanyService>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IPowerCalculationService, PowerCalculationService>();
+            services.AddScoped<IComparisonCalculationService, ComparisonCalculationService>();
 
-        return services;
+            return services;
+        }
     }
 }
